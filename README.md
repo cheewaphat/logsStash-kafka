@@ -60,6 +60,6 @@ docker exec -it filebeat filebeat test output -e -c /usr/share/filebeat/filebeat
 
 
 # ref
-docker kafka images [link](https://hub.docker.com/r/wurstmeister/kafka)
-example post [tutorial](https://logz.io/blog/filebeat-tutorial/)
-[file beat configuration-kerberos.](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-kerberos.html)
+- docker kafka images [link](https://hub.docker.com/r/wurstmeister/kafka)
+- example post [tutorial](https://logz.io/blog/filebeat-tutorial/)
+- [file beat configuration-kerberos.](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-kerberos.html)
