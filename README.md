@@ -20,9 +20,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-serve
 
 Test Json MSG HTTP --> logStash (port 10000) --> Kafka (local)
 ```sh
-curl -X POST -d @test-msg.json http://localhost:10000 --header "Content-Type:application/json"
 curl -X POST -d "{msg:12144}" http://localhost:10000 --header "Content-Type:application/json"
-
 ```
 
 # ref
