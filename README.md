@@ -8,6 +8,11 @@
 
 ## 2. logStash -> kafka
 
+Begin 
+```sh
+docker-compose up -d -f docker-compose.yml
+```
+
 view all topisc
 ```sh
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --list --zookeeper zookeeper:2181
