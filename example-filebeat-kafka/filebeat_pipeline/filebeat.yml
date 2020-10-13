@@ -1,0 +1,27 @@
+filebeat.inputs:
+    - type: log
+      paths:
+        - "/tmp/data/*.log"
+      # exclude_files: ['\.gz$']
+      # document_type: json
+      # fields:
+      #   type: secuPI_access_log
+      #   codec: json
+      # input_type: log
+output.kafka:
+  hosts: ["192.168.1.106:9092"]
+
+  # message topic selection + partitioning
+  topic: 'filebeat_logs'
+  # partition.round_robin:
+  #   reachable_only: false
+
+  required_acks: 1
+  compression: gzip
+  # max_message_bytes: 1000000
+  # output.kafka.hosts: ["http://my-kafka.elastic.co:9200"]
+  # output.kafka.kerberos.auth_type: password
+  # output.kafka.kerberos.username: "elastic"
+  # output.kafka.kerberos.password: "changeme"
+  # output.kafka.kerberos.config_path: "/etc/krb5.conf"
+  # output.kafka.kerberos.realm: "ELASTIC.CO"
